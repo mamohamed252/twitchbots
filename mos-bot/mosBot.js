@@ -1,5 +1,6 @@
 const tmi = require('tmi.js');
 const Secrets = require('./secrets.js');
+
 const LangBot = require('./other-bot-commands/langBot.js');
 // Define configuration options
 const opts = {
@@ -9,11 +10,11 @@ const opts = {
   },
   channels: [
     Secrets.twitchChannels[0],
-    // Secrets.twitchChannels[1],
-    // Secrets.twitchChannels[2],
-    // Secrets.twitchChannels[3],
-    // Secrets.twitchChannels[4],
-    // Secrets.twitchChannels[5]
+    Secrets.twitchChannels[1],
+    Secrets.twitchChannels[2],
+    Secrets.twitchChannels[3],
+    Secrets.twitchChannels[4],
+    Secrets.twitchChannels[5]
   ],
     // Automatic reconnection
     connection: { reconnect: true }
@@ -40,7 +41,6 @@ function onMessageHandler(channel, userState, msg, self) {
 
   // Remove whitespace from chat message
   const commandName = commandArray[0];
-  console.log('commandArray', commandArray)
 
   // If the command is known, let's execute it
   if (commandName === '!dice') {

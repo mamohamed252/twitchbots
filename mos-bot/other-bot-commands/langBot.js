@@ -11,6 +11,11 @@ const tr_lang = {
   'zu': ['zu', 'says'],
   'ar': ['ar', 'says'],
   'tl': ['tl', 'says'], 
+  'ko': ['ko', 'says'], 
+  'ja': ['ja', 'says'], 
+  'km': ['km', 'says'], 
+  'so': ['so', 'says'], 
+  
 }
 
 // Called every time a message comes in
